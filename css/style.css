@@ -3,6 +3,7 @@
 
 :root{
     --a:0;
+    --b:50px;
 }
 * {
     margin: 0;
@@ -37,4 +38,111 @@ body {
     list-style: none;
     padding-top: 14px;
     font-weight: bold;
+}
+.heading {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    padding-top: 14px;
+    padding: 23px 14px;
+    font-weight: bold;
+    align-items: center;
+    font-size: 13px;
+}
+.heading img {
+    width: 30px;
+}
+
+.library {
+    min-height: 73vh;
+    position: relative;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.68rem;
+    gap: 20px;
+    position: absolute;
+    bottom: 0;
+    padding: 10px ;
+
+}
+
+.footer a {
+    color:#a9b7a9;
+    text-decoration: none;
+}
+.right {
+    margin: 16px 0;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(34 34 34);
+}
+
+.header>* {
+    padding: 20px;
+}
+
+.spotifyPlaylists {
+    padding: 16px;
+}
+
+.spotifyPlaylists h1 {
+    padding: 16px;
+}
+
+.cardContainer {
+    margin: 30px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    max-height: 60vh; 
+}
+
+.card {
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #25252500;
+
+    position: relative;
+    transition: all .9s;
+}
+.card:hover{
+    background-color: #252525;
+     cursor: pointer;
+    --a: 1;
+    --b: 88px;
+}
+
+.card>* {
+    padding-top: 10px;
+}
+
+.card img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.play {
+    width: 28px;
+    height: 28px;
+    background-color: #1fdf64;
+    border-radius: 50%;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: var(--b);
+    /*   i have created a global var b to set the bottom value on hover effect on card */
+    right: 17px;
+    opacity: var(--a);
+    transition: all 0.5s ease-out;
 }
